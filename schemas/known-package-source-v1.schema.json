@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Treatid2/FGPM-Known-Package-Links/blob/v0.1.0/schemas/known-package-source-v1.schema.json",
+  "title": "FGPM known-package source v1",
+  "type": "object",
+  "required": ["schema", "source", "records"],
+  "properties": {
+    "schema": { "const": "fgpm.known-package-source/1" },
+    "source": {
+      "type": "object",
+      "required": ["id", "name", "version", "attribution", "observedAt"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "attribution": { "type": "string", "minLength": 1 },
+        "observedAt": { "type": "string", "format": "date-time" },
+        "url": { "type": ["string", "null"], "format": "uri-reference" },
+        "manager": { "type": ["object", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/record" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "stringList": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "record": {
+      "type": "object",
+      "required": ["recordId", "coordinate", "package", "declarations", "publisher", "verification", "availability", "policy"],
+      "properties": {
+        "recordId": { "type": "string", "minLength": 1 },
+        "coordinate": {
+          "type": "object",
+          "required": ["namespace", "name", "version"],
+          "properties": {
+            "namespace": { "type": "string", "format": "uuid" },
+            "name": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "package": {
+          "type": "object",
+          "required": ["format", "contentRoot", "license"],
+          "properties": {
+            "format": { "type": "string", "minLength": 1 },
+            "contentRoot": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+            "license": { "type": "string", "minLength": 1 },
+            "predecessor": { "type": ["object", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "declarations": {
+          "type": "object",
+          "required": ["capabilities", "interfaces", "functions"],
+          "properties": {
+            "capabilities": { "$ref": "#/$defs/stringList" },
+            "interfaces": { "$ref": "#/$defs/stringList" },
+            "functions": { "$ref": "#/$defs/stringList" }
+          },
+          "additionalProperties": false
+        },
+        "publisher": {
+          "type": "object",
+          "required": ["repository", "release", "artifact", "checksum", "receipt"],
+          "properties": {
+            "repository": { "type": ["string", "null"], "format": "uri" },
+            "release": { "type": ["string", "null"], "format": "uri" },
+            "artifact": { "type": ["string", "null"], "format": "uri" },
+            "checksum": { "type": ["string", "null"], "format": "uri" },
+            "receipt": { "type": ["string", "null"], "format": "uri" },
+            "sourceCommit": { "type": "string", "pattern": "^[0-9a-f]{40}$" }
+          },
+          "additionalProperties": false
+        },
+        "verification": {
+          "type": "object",
+          "required": ["status", "verifiedAt", "archiveBytes", "archiveSha256", "method"],
+          "properties": {
+            "status": { "type": "string", "minLength": 1 },
+            "verifiedAt": { "type": "string", "format": "date-time" },
+            "archiveBytes": { "type": "integer", "minimum": 0 },
+            "archiveSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "method": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "availability": {
+          "type": "object",
+          "required": ["status", "observedAt"],
+          "properties": {
+            "status": { "enum": ["observed-available", "observed-unavailable", "unknown"] },
+            "observedAt": { "type": "string", "format": "date-time" }
+          },
+          "additionalProperties": false
+        },
+        "policy": {
+          "type": "object",
+          "required": ["recommendation", "statement"],
+          "properties": {
+            "recommendation": { "enum": ["not-assessed", "recommended", "not-recommended"] },
+            "statement": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

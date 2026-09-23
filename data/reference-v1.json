@@ -1,0 +1,1442 @@
+{
+  "schema": "fgpm.known-package-source/1",
+  "source": {
+    "id": "treatid2.fgpm.stage-c-release",
+    "name": "Treatid2 FGPM verified Stage C release",
+    "version": "2026-09-23.1",
+    "attribution": "Treatid2 publication facts independently re-read and verified by the FGPM release owner",
+    "observedAt": "2026-09-23T06:14:56Z",
+    "url": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+    "manager": {
+      "version": "0.11.0-rc.6",
+      "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-reference-tools-win32-x64-v0.11.0-rc.6.zip",
+      "sha256": "b396a7675af15b2252737a41311742f178ceb4e9d83703b20960ed7fbba09701",
+      "immutableRelease": true
+    }
+  },
+  "records": [
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:6c58993f5b86831045182247546b7ddca291ffc1b055600db2152eeaa7dca538",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.camera",
+        "version": "0.1.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:6c58993f5b86831045182247546b7ddca291ffc1b055600db2152eeaa7dca538",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgpm.handler.scene"
+        ],
+        "interfaces": [
+          "fgpm.demo.camera/1"
+        ],
+        "functions": [
+          "pkg:demo.camera/camera/fixed"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-camera-v0.1.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-camera-v0.1.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 627,
+        "archiveSha256": "46c54d8b1a3c9ea84c22eb7263c1cd02460a1d3a49b5a928cafaee212cd18baf",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:de5e333d02d424482f81a616cdfbbea781b6224b90bf0aedc5bed5841194cffe",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.character",
+        "version": "0.1.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:de5e333d02d424482f81a616cdfbbea781b6224b90bf0aedc5bed5841194cffe",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgpm.handler.scene"
+        ],
+        "interfaces": [
+          "fgpm.demo.visual-assembly/1"
+        ],
+        "functions": [
+          "pkg:demo.character/assembly/block-character"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-character-v0.1.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-character-v0.1.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 855,
+        "archiveSha256": "2be69ffed2394c3a92895b50fc881ccdc178edc336f666517d4b6ae789866aef",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:704d62369fcde6e133bce911b20d81d62b04bc0fbd6960281ab20c63953409f4",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.deterministic-scheduler-v2",
+        "version": "0.8.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:704d62369fcde6e133bce911b20d81d62b04bc0fbd6960281ab20c63953409f4",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.clock.tick",
+          "runtime.restore.ready",
+          "runtime.scheduler.barrier",
+          "runtime.scheduler.records",
+          "runtime.task",
+          "runtime.task-channel.transforms",
+          "runtime.transforms.read",
+          "runtime.transforms.write"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2",
+          "runtime.persistence/1",
+          "runtime.scheduler/2",
+          "runtime.transforms/1"
+        ],
+        "functions": [
+          "service:demo.deterministic-scheduler-v2/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-deterministic-scheduler-v2-v0.8.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-deterministic-scheduler-v2-v0.8.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 5800,
+        "archiveSha256": "d2b80af01067a7032fd0c734ec04c8d4c870c9075493336e733d73993805fd29",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:f30ab391d4fe3dfac2c947ea888824599ef2450ac5c53884828545f43d7c9a7a",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.deterministic-scheduler",
+        "version": "0.7.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:f30ab391d4fe3dfac2c947ea888824599ef2450ac5c53884828545f43d7c9a7a",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.clock.tick",
+          "runtime.restore.ready",
+          "runtime.scheduler.barrier",
+          "runtime.scheduler.records",
+          "runtime.task",
+          "runtime.transforms.read",
+          "runtime.transforms.write"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/1",
+          "runtime.persistence/1",
+          "runtime.scheduler/1",
+          "runtime.transforms/1"
+        ],
+        "functions": [
+          "service:demo.deterministic-scheduler/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-deterministic-scheduler-v0.7.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-deterministic-scheduler-v0.7.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 7718,
+        "archiveSha256": "44fbaff58a244a4a19d404a6f18b46e84cd8319a77e5d1a1eae46acdc5123bf0",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:72b5f8742235c126a40c547586f2f694d75651878401768e800f826e6e97e13f",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.external-nudge-v2",
+        "version": "1.0.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:72b5f8742235c126a40c547586f2f694d75651878401768e800f826e6e97e13f",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.task",
+          "runtime.transforms.read"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2",
+          "fgpm.runtime-task-member/2",
+          "fgpm.runtime-task-vocabulary/2",
+          "fgpm.transform-snapshot/1",
+          "fgpm.transform-task-vocabulary/1",
+          "runtime.task.demo-external-nudge-v2/1"
+        ],
+        "functions": [
+          "service:demo.external-nudge-v2/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-external-nudge-v2-v1.0.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-external-nudge-v2-v1.0.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1739,
+        "archiveSha256": "3c385ebd09033d18c1e71d18ee00de3525011ecc83ae62a64db74fb90f29ea4a",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:3ec3f1e4f350b6132ea710c1f955bcffa64fe36e2addaa384363d14cc5aaf87a",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.field",
+        "version": "0.1.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:3ec3f1e4f350b6132ea710c1f955bcffa64fe36e2addaa384363d14cc5aaf87a",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgpm.handler.scene"
+        ],
+        "interfaces": [
+          "fgpm.demo.visual-assembly/1"
+        ],
+        "functions": [
+          "pkg:demo.field/assembly/field"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-field-v0.1.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-field-v0.1.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 788,
+        "archiveSha256": "079f3d9b03f61848ebb92f2cc355bf2348f3ed6753e97c6b27c063a74df57052",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:b4f18d2b7077186348dfaf95c48fb5f2d7992c7485a5679c18185a688c19a724",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.motion-offset-v2",
+        "version": "0.8.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:b4f18d2b7077186348dfaf95c48fb5f2d7992c7485a5679c18185a688c19a724",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.task",
+          "runtime.transforms.read"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2",
+          "fgpm.runtime-task-member/2",
+          "fgpm.runtime-task-vocabulary/2",
+          "fgpm.transform-snapshot/1",
+          "fgpm.transform-task-vocabulary/1",
+          "runtime.task.demo-motion-offset-v2/1"
+        ],
+        "functions": [
+          "service:demo.motion-offset-v2/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-motion-offset-v2-v0.8.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-motion-offset-v2-v0.8.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1711,
+        "archiveSha256": "0ede7ae8c1be3cb8645ebf4a8955b66bc89f168b1fc9d8f565eeb4eba494a379",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:db03e456f3624d54cae5059a31dd617466c69eb4ca6706e3604af34b61848716",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.motion-offset",
+        "version": "0.7.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:db03e456f3624d54cae5059a31dd617466c69eb4ca6706e3604af34b61848716",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.task"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/1",
+          "runtime.task.demo-motion-offset/1"
+        ],
+        "functions": [
+          "service:demo.motion-offset/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-motion-offset-v0.7.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-motion-offset-v0.7.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1369,
+        "archiveSha256": "cbfc4ca9c84579695c0cdd7beb134a271e0c8d1aef1c0f126efc241a2c0f1b1d",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:3d7dbf7d813f36ea9259105af23871c058881c05fbbaceed50a31c8aa7d577e5",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.motion-v2",
+        "version": "0.8.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:3d7dbf7d813f36ea9259105af23871c058881c05fbbaceed50a31c8aa7d577e5",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.task",
+          "runtime.transforms.read"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2",
+          "fgpm.runtime-task-member/2",
+          "fgpm.runtime-task-vocabulary/2",
+          "fgpm.transform-snapshot/1",
+          "fgpm.transform-task-vocabulary/1",
+          "runtime.task.demo-motion-v2/1"
+        ],
+        "functions": [
+          "service:demo.motion-v2/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-motion-v2-v0.8.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-motion-v2-v0.8.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1909,
+        "archiveSha256": "ab1402752c0a0d712d277fe2ef2435ea3f45f33e22731106806525e893ea6c60",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:ee6000bdc5901ea850965a9ef4e402f1c7bf8cc8658147ea411e7ccd74ce98a8",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.motion",
+        "version": "0.7.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:ee6000bdc5901ea850965a9ef4e402f1c7bf8cc8658147ea411e7ccd74ce98a8",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.task"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/1",
+          "runtime.task.demo-motion/1"
+        ],
+        "functions": [
+          "service:demo.motion/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-motion-v0.7.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-motion-v0.7.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1602,
+        "archiveSha256": "095ca80c993b9453b9becf741a38e3cc8f4aae6754a14e7f8ca522471b108192",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:f9afd08ac72709a48a0c63f42f83da448fe9d91eecc027e2521dae1267fa64d2",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.primitives",
+        "version": "0.1.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:f9afd08ac72709a48a0c63f42f83da448fe9d91eecc027e2521dae1267fa64d2",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgpm.handler.scene",
+          "fgpm.handler.texture"
+        ],
+        "interfaces": [
+          "fgpm.demo.mesh/1",
+          "fgpm.demo.solid-colour/1",
+          "fgpm.demo.texture-file/1"
+        ],
+        "functions": [
+          "pkg:demo.primitives/mesh/body-cube",
+          "pkg:demo.primitives/mesh/field",
+          "pkg:demo.primitives/mesh/head-cube",
+          "pkg:demo.primitives/texture/body",
+          "pkg:demo.primitives/texture/field",
+          "pkg:demo.primitives/texture/head"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-primitives-v0.1.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-primitives-v0.1.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 2079,
+        "archiveSha256": "d15fc4de1a5503d292a61f26e26009d4d829b9e1d08a406336d39b719b10a578",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:ca0fb8d9fcd79ed62c373275a0fb0b51f69da6d2d7b479a6b61a01260415d1d8",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.runtime-clock",
+        "version": "0.4.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:ca0fb8d9fcd79ed62c373275a0fb0b51f69da6d2d7b479a6b61a01260415d1d8",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.clock.tick"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/1"
+        ],
+        "functions": [
+          "service:demo.runtime-clock/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-runtime-clock-v0.4.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-runtime-clock-v0.4.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1095,
+        "archiveSha256": "c4587aae72296dec36f9362e7c43ed421d2078b992dbaec53c3929c8721b9e8e",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:04dbc8188794dac7d32687fe04f24749002c10882e3f2ab47896828d2015fbf2",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.runtime-instance-store",
+        "version": "0.6.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:04dbc8188794dac7d32687fe04f24749002c10882e3f2ab47896828d2015fbf2",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.instances.destroy",
+          "runtime.instances.materialize",
+          "runtime.instances.read",
+          "runtime.state.owner"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/1",
+          "runtime.instances/1"
+        ],
+        "functions": [
+          "service:demo.runtime-instance-store/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-runtime-instance-store-v0.6.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-runtime-instance-store-v0.6.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 3259,
+        "archiveSha256": "5394c201fd686c5f2a74abd98cf6788dea62828e74d8c552a8adbc64b712a2cb",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:aa1205c5cc5463a7ebf875c524dfe7d989ad178f9aeb049074851f7c15de2f07",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.runtime-task-v2-distribution",
+        "version": "0.8.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:aa1205c5cc5463a7ebf875c524dfe7d989ad178f9aeb049074851f7c15de2f07",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [],
+        "interfaces": [
+          "fgpm.demo.runtime/1"
+        ],
+        "functions": [
+          "pkg:demo.runtime-task-v2-distribution/runtime/browser-svg"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-runtime-task-v2-distribution-v0.8.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-runtime-task-v2-distribution-v0.8.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 802,
+        "archiveSha256": "1fb64b959761d927927eb187cba5249fb4a83f0ef1e32f37180ba217027fa62c",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:603c3cfc7f9fd02d494d883ad91b35926b6b42a989d5bc9a1f6870dc8d76ab96",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.save-coordinator",
+        "version": "0.7.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:603c3cfc7f9fd02d494d883ad91b35926b6b42a989d5bc9a1f6870dc8d76ab96",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.clock.tick",
+          "runtime.persistence.world",
+          "runtime.restore.ready",
+          "runtime.state.owner",
+          "runtime.transforms.migration"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/1",
+          "runtime.persistence/1"
+        ],
+        "functions": [
+          "service:demo.save-coordinator/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-save-coordinator-v0.7.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-save-coordinator-v0.7.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 4804,
+        "archiveSha256": "e5817a09e61e675e297121b98cc1e279cbbfdeb5ce3d4fa81a09ded57ca885e6",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:30351f5efe5b1c81a3302bd1ecd4040ff1fa490b33246f8cdc13f3a5e7f1a54e",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.scene-extractor-v2",
+        "version": "0.8.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:30351f5efe5b1c81a3302bd1ecd4040ff1fa490b33246f8cdc13f3a5e7f1a54e",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.instances.read",
+          "runtime.restore.ready",
+          "runtime.scene-snapshot",
+          "runtime.scheduler.barrier",
+          "runtime.transforms.read"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2",
+          "runtime.instances/1",
+          "runtime.persistence/1",
+          "runtime.scheduler/2",
+          "runtime.transforms/1"
+        ],
+        "functions": [
+          "service:demo.scene-extractor-v2/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-scene-extractor-v2-v0.8.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-scene-extractor-v2-v0.8.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1742,
+        "archiveSha256": "aec25618069ddc02c94eebe14c39c47a720abad5e71656833702feb46df000b6",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:08b7f3c8febd44cc3956bf534077af9b96f6b66e85458b3142f88fd8fd75c249",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.scene-extractor",
+        "version": "0.7.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:08b7f3c8febd44cc3956bf534077af9b96f6b66e85458b3142f88fd8fd75c249",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.instances.read",
+          "runtime.restore.ready",
+          "runtime.scene-snapshot",
+          "runtime.scheduler.barrier",
+          "runtime.transforms.read"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/1",
+          "runtime.instances/1",
+          "runtime.persistence/1",
+          "runtime.scheduler/1",
+          "runtime.transforms/1"
+        ],
+        "functions": [
+          "service:demo.scene-extractor/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-scene-extractor-v0.7.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-scene-extractor-v0.7.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1476,
+        "archiveSha256": "cc5df474183044c8b53803b3e746ca44d614ad671ea558c1ab0f3e9d8b52a824",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:ebf59847dfcc3f0138affabaa27e149ea1899bbf164522d0d4987f4cc4e9a929",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.scene-toolchain",
+        "version": "0.4.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:ebf59847dfcc3f0138affabaa27e149ea1899bbf164522d0d4987f4cc4e9a929",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgpm.handler.scene"
+        ],
+        "interfaces": [
+          "fgpm.build-environment/1",
+          "fgpm.handler-stdio/1"
+        ],
+        "functions": [
+          "handler:demo.scene-toolchain/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-scene-toolchain-v0.4.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-scene-toolchain-v0.4.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 4166,
+        "archiveSha256": "443112d4d85873c795f6b77453acbab041a22591d95a199c3832e39602d8cda3",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:91fdddca050811590322500bab9da5a5b29fd27e52a884e7e3cfc2cf5f718de2",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.scene-validator",
+        "version": "0.3.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:91fdddca050811590322500bab9da5a5b29fd27e52a884e7e3cfc2cf5f718de2",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [],
+        "interfaces": [
+          "fgpm.handler-stdio/1"
+        ],
+        "functions": [
+          "handler:demo.scene-validator/1",
+          "validator:demo.scene-proposal/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-scene-validator-v0.3.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-scene-validator-v0.3.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1014,
+        "archiveSha256": "88a1e67de60dc23d3181752bd4ea05899dbfaba6e9c4664916b3932506cd071e",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:93c187518ab58f00e8ef06e3e3871815f343d48cb5bcc1ec512576d928e1217b",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.simple-runtime",
+        "version": "0.7.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:93c187518ab58f00e8ef06e3e3871815f343d48cb5bcc1ec512576d928e1217b",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgpm.handler.scene",
+          "fgpm.runtime.render-scene",
+          "runtime.renderer.window",
+          "runtime.scene-snapshot"
+        ],
+        "interfaces": [
+          "fgpm.demo.runtime/1",
+          "fgpm.runtime-service/1"
+        ],
+        "functions": [
+          "pkg:demo.simple-runtime/runtime/browser-svg",
+          "service:demo.simple-runtime/browser-svg/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-simple-runtime-v0.7.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-simple-runtime-v0.7.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 5204,
+        "archiveSha256": "a0c8afecfb173ebde10a57d08950fba344abcabfa3e6cacf028216f871afe88c",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:71dfc5edc7f75734d67a239b03b9cfa318067ec2b21c6b3b3133370252174429",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.solid-colour-adapter",
+        "version": "0.3.1"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:71dfc5edc7f75734d67a239b03b9cfa318067ec2b21c6b3b3133370252174429",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [],
+        "interfaces": [
+          "fgpm.build-environment/1",
+          "fgpm.handler-stdio/1"
+        ],
+        "functions": [
+          "adapter:demo.solid-colour-to-rgba8-srgb/1",
+          "handler:demo.solid-colour-adapter/1",
+          "lossless"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-solid-colour-adapter-v0.3.1.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-solid-colour-adapter-v0.3.1.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 962,
+        "archiveSha256": "e782c1a565df51758076311d0663695a1dc6b55c01f27efceb3891b30d334040",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:18c07076e1c7d6ce8204ee317a553799e0ddcd4a2885a435b1b9f25d83e90e81",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.texture-toolchain",
+        "version": "0.3.1"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:18c07076e1c7d6ce8204ee317a553799e0ddcd4a2885a435b1b9f25d83e90e81",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgpm.handler.texture"
+        ],
+        "interfaces": [
+          "fgpm.build-environment/1",
+          "fgpm.handler-stdio/1"
+        ],
+        "functions": [
+          "handler:demo.texture-toolchain/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-texture-toolchain-v0.3.1.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-texture-toolchain-v0.3.1.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 3031,
+        "archiveSha256": "0f3af28a01e07feeff84a427bdfb731f705f2011bb6d5ee1f1e6bbe587da73f1",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:a03cf574b7e55dcf89b24aca70fcfa84ccb3db7d1e406a7ac03b1d6373dba5fd",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.texture-vocabulary",
+        "version": "0.3.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:a03cf574b7e55dcf89b24aca70fcfa84ccb3db7d1e406a7ac03b1d6373dba5fd",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [],
+        "interfaces": [],
+        "functions": [
+          "relation:demo.texture/base-colour-solid-to-runtime/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-texture-vocabulary-v0.3.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-texture-vocabulary-v0.3.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 377,
+        "archiveSha256": "660282d4db7aa839d1e6beca2d5d82e16b3fd6c2132ba3ee59d08c9aec1dc054",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:24694ae4f6d67790034cc16c0755add036cc231fd12e814105e0552fce5bae03",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.transform-authority",
+        "version": "0.7.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:24694ae4f6d67790034cc16c0755add036cc231fd12e814105e0552fce5bae03",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.instances.materialize",
+          "runtime.instances.read",
+          "runtime.state.owner",
+          "runtime.transforms.read",
+          "runtime.transforms.write"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/1",
+          "runtime.instances/1",
+          "runtime.transforms/1"
+        ],
+        "functions": [
+          "service:demo.transform-authority/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-transform-authority-v0.7.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-transform-authority-v0.7.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 3589,
+        "archiveSha256": "a0dcd45b7c869f6852c88307f3723752053dd0c319df162574f307d2cb7365c0",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:15d11c02cb5a34e28b88fee64b3eb596f21230fb7ea16957c54632d49f91f3c9",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.wind-offset-v2",
+        "version": "1.0.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:15d11c02cb5a34e28b88fee64b3eb596f21230fb7ea16957c54632d49f91f3c9",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.task",
+          "runtime.transforms.read"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2",
+          "fgpm.runtime-task-member/2",
+          "fgpm.runtime-task-vocabulary/2",
+          "fgpm.transform-snapshot/1",
+          "fgpm.transform-task-vocabulary/1",
+          "runtime.task.demo-wind-offset-v2/1"
+        ],
+        "functions": [
+          "service:demo.wind-offset-v2/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-wind-offset-v2-v1.0.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-wind-offset-v2-v1.0.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1718,
+        "archiveSha256": "4ffa83599e320a0b6ea1a77c9234ec279c69b1e4b52a41c1be1ed91bf27ff0ca",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:e81d9fdf06aaa49ac878a28b5ac52c2b880ce89a17570d7f24aa769d85029165",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "demo.worldspace",
+        "version": "0.1.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:e81d9fdf06aaa49ac878a28b5ac52c2b880ce89a17570d7f24aa769d85029165",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgpm.handler.scene"
+        ],
+        "interfaces": [
+          "fgpm.demo.worldspace/1"
+        ],
+        "functions": [
+          "pkg:demo.worldspace/world/demo"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-worldspace-v0.1.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-demo-worldspace-v0.1.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 716,
+        "archiveSha256": "5f22e3331159871489c4bda624deb806f45c96e0a18a5779285d713603a1f806",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:db4617f3766e39a750dcddc7ee25523ad909b0cbb93440f7a833fd92fd88a184",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "fgpm.runtime-task-contracts",
+        "version": "2.0.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:db4617f3766e39a750dcddc7ee25523ad909b0cbb93440f7a833fd92fd88a184",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [],
+        "interfaces": [],
+        "functions": []
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-fgpm-runtime-task-contracts-v2.0.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-fgpm-runtime-task-contracts-v2.0.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 1445,
+        "archiveSha256": "5d27a2c1cc96f0d5d6454c40fc674283288a132fb47229daf629a58809fbc82e",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-fgpm-rc6:sha256:be97672e9b023b9b1e5dde279dcac435ef9817e59bcc303f9345a744a0893b05",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "fgpm.transform-task-contracts",
+        "version": "1.0.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:be97672e9b023b9b1e5dde279dcac435ef9817e59bcc303f9345a744a0893b05",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "runtime.task-channel.transforms"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2"
+        ],
+        "functions": [
+          "service:fgpm.transform-task-contracts/1"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-fgpm-transform-task-contracts-v1.0.0.zip",
+        "checksum": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.11.0-rc.6/fgpm-package-fgpm-transform-task-contracts-v1.0.0.zip.sha256",
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/394337356",
+        "sourceCommit": "d8e5148b6b8fd3b8b491889f73eceea4aaf1c3d6"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-23T06:14:56Z",
+        "archiveBytes": 3206,
+        "archiveSha256": "0fd62fbe0b1fa107c3d75a453166a00da7908ad2427380474ecc32bf816eaa1d",
+        "method": "anonymous release download SHA-256 plus FGPM v0.11.0-rc.6 package identity --expected"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-23T06:14:56Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    }
+  ]
+}

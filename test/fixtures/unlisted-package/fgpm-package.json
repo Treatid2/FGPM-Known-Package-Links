@@ -1,0 +1,14 @@
+{
+  "format": "fgpm.package/1",
+  "namespace": "22222222-3333-4444-8555-666666666666",
+  "name": "example.unlisted-local",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "contributions": [
+    {
+      "id": "pkg:example.unlisted-local/value/main",
+      "manifestType": "example.unlisted-value/1",
+      "manifest": "value.json"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@fgpm/known-package-links",
+  "version": "0.1.0",
+  "description": "Optional, source-attributed discovery for links to known FGPM packages",
+  "type": "module",
+  "bin": {
+    "fgpm-known": "bin/fgpm-known.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/directory.mjs && node --check src/cli.mjs && node --check bin/fgpm-known.mjs",
+    "build:data": "node tools/build-reference-data.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MPL-2.0",
+  "files": [
+    "bin",
+    "data",
+    "docs",
+    "schemas",
+    "src",
+    "LICENSES",
+    "LICENSING.md",
+    "README.md"
+  ]
+}
