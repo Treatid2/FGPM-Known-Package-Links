@@ -7,9 +7,11 @@
     "fgpm-known": "bin/fgpm-known.mjs"
   },
   "scripts": {
-    "test": "node --test",
+    "test": "node tools/verify-data-integrity.mjs && node --test",
     "check": "node --check src/directory.mjs && node --check src/declarations.mjs && node --check src/cli.mjs && node --check bin/fgpm-known.mjs",
-    "build:data": "node tools/build-reference-data.mjs"
+    "build:data": "node tools/build-reference-data.mjs",
+    "verify:data": "node tools/verify-data-integrity.mjs",
+    "prepack": "node tools/verify-data-integrity.mjs"
   },
   "engines": {
     "node": ">=20"

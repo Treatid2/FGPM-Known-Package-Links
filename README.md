@@ -4,7 +4,7 @@ This is an optional, independently usable directory for source-attributed links 
 
 The component is dependency-free and works with Node.js 20 or newer. Its bundled reference dataset records 28 exact package archives from the immutable [FGPM v0.11.0-rc.6 release](https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/v0.11.0-rc.6), verified by anonymous download and recomputation of each FGPM content root. One accepted integration package is intentionally absent because its exact accepted tree contained a private coordination identifier; absence is not revocation or invalidity.
 
-The corrected `data/reference-v1.json` SHA-256 is `a41ccdd7e48eedde1ecabb27e99f885a8ace28507cf8f518aba354a126040d06`; the adjacent sidecar is informational and the JSON source remains replaceable. Declaration extraction follows the supported package-manifest structures and does not treat descriptive values such as conversion quality as callable functions.
+The corrected `data/reference-v1.json` is frozen as an LF byte representation: 60,311 bytes with SHA-256 `a41ccdd7e48eedde1ecabb27e99f885a8ace28507cf8f518aba354a126040d06`. The adjacent sidecar describes those exact bytes, and both `npm test` and `npm pack` verify the correspondence without newline normalization. The JSON source remains replaceable. Declaration extraction follows the supported package-manifest structures and does not treat descriptive values such as conversion quality as callable functions.
 
 ## Query
 
@@ -27,6 +27,7 @@ The [query contract](docs/query-contract.md) documents semantics and exit codes.
 ```powershell
 npm test
 npm run check
+npm run verify:data
 ```
 
 Set `FGPM_PUBLIC_NODE` to an extracted public `bin/node.exe` and `FGPM_PUBLIC_ENTRY` to its `bin/fgpm.mjs`, then run `node --test test/public-manager.test.mjs` to prove a valid package absent from every directory source remains independently verifiable by the manager.
