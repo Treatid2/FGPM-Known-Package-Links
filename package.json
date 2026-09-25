@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "node --test",
-    "check": "node --check src/directory.mjs && node --check src/cli.mjs && node --check bin/fgpm-known.mjs",
+    "check": "node --check src/directory.mjs && node --check src/declarations.mjs && node --check src/cli.mjs && node --check bin/fgpm-known.mjs",
     "build:data": "node tools/build-reference-data.mjs"
   },
   "engines": {

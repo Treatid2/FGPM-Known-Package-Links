@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: Apache-2.0
 import assert from "node:assert/strict";
 import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises";
+import { createServer } from "node:http";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 import { queryDirectory, validateDataset } from "../src/directory.mjs";
-import { runCli } from "../src/cli.mjs";
+import { escapeHuman, runCli } from "../src/cli.mjs";
+import { extractDeclarations } from "../src/declarations.mjs";
 
 const namespace = "11111111-2222-4333-8444-555555555555";
 const rootA = `sha256:${"a".repeat(64)}`;
@@ -75,6 +77,13 @@ async function sourceFile(t, id, records) {
   return path;
 }
 
+async function datasetFile(t, filename, value) {
+  const root = await workspace(t);
+  const path = join(root, filename);
+  await writeFile(path, `${JSON.stringify(value, null, 2)}\n`);
+  return path;
+}
+
 test("bundled reference dataset contains the 28 verified public package records", async () => {
   const result = await queryDirectory();
   assert.equal(result.status, "ok");
@@ -107,7 +116,8 @@ test("same exact object from two sources preserves both listings and attribution
   const result = await queryDirectory({ includeDefault: false, sources: [one, two] });
   assert.equal(result.count, 2);
   assert.deepEqual(result.listings.map((item) => item.source.id).sort(), ["source.one", "source.two"]);
-  assert.deepEqual(result.conflicts.multiplyListedObjects, [{ contentRoot: rootA, sources: ["source.one", "source.two"] }]);
+  assert.deepEqual(result.conflicts.multiplyListedObjects[0].sources.map((item) => item.claimedSourceId), ["source.one", "source.two"]);
+  assert.deepEqual(result.conflicts.multiplyListedObjects[0].sources.map((item) => item.provenanceId), ["source-0001", "source-0002"]);
 });
 
 test("conflicting roots for one coordinate remain visible ambiguity", async (t) => {
@@ -175,4 +185,158 @@ test("malformed records fail validation with a bounded explanation", () => {
   const malformed = dataset("source.bad", [record()]);
   malformed.records[0].package.contentRoot = "not-a-root";
   assert.throws(() => validateDataset(malformed), /lowercase sha256 identity/);
+});
+
+test("runtime validation enforces every published schema class", () => {
+  const cases = [
+    ["namespace", (value) => { value.records[0].coordinate.namespace = "not-a-uuid"; }, /UUID/],
+    ["date", (value) => { value.records[0].verification.verifiedAt = "2026-02-30T00:00:00Z"; }, /RFC 3339/],
+    ["publisher URL", (value) => { value.records[0].publisher.release = "not a URI"; }, /valid URI/],
+    ["availability", (value) => { delete value.records[0].availability; }, /availability is required/],
+    ["policy", (value) => { delete value.records[0].policy; }, /policy is required/],
+    ["archive bytes", (value) => { value.records[0].verification.archiveBytes = -1; }, /non-negative/],
+    ["fractional archive bytes", (value) => { value.records[0].verification.archiveBytes = 1.5; }, /non-negative/],
+    ["archive hash", (value) => { value.records[0].verification.archiveSha256 = "no"; }, /SHA-256/],
+    ["verification method", (value) => { delete value.records[0].verification.method; }, /method is required/],
+    ["source commit", (value) => { value.records[0].publisher.sourceCommit = "ABC"; }, /40-hex/],
+    ["declaration type", (value) => { value.records[0].declarations.functions.push(7); }, /string/],
+    ["declaration uniqueness", (value) => { value.records[0].declarations.functions.push("example.function"); }, /unique/],
+    ["additional property", (value) => { value.records[0].invented = true; }, /unsupported property/],
+    ["nested additional property", (value) => { value.records[0].coordinate.invented = true; }, /unsupported property/],
+    ["predecessor", (value) => { value.records[0].package.predecessor = "not-an-object"; }, /must be an object/],
+    ["availability enum", (value) => { value.records[0].availability.status = "maybe"; }, /unsupported/],
+    ["policy enum", (value) => { value.records[0].policy.recommendation = "preferred"; }, /unsupported/],
+    ["source date", (value) => { value.source.observedAt = "yesterday"; }, /RFC 3339/],
+    ["source URL", (value) => { value.source.url = "not a URI"; }, /valid URI/],
+    ["source manager", (value) => { value.source.manager = []; }, /must be an object/],
+  ];
+  for (const [name, mutate, pattern] of cases) {
+    const value = dataset(`source.bad-${name}`, [record()]);
+    mutate(value);
+    assert.throws(() => validateDataset(value), pattern, name);
+  }
+});
+
+test("a late malformed record rejects its source atomically", async (t) => {
+  const malformed = dataset("source.atomic", [record(), record({ root: rootB, name: "second" })]);
+  malformed.records[1].declarations.functions.push(42);
+  const path = await datasetFile(t, "atomic.json", malformed);
+  const result = await queryDirectory({ includeDefault: false, sources: [path] });
+  assert.equal(result.status, "sources-unavailable");
+  assert.equal(result.count, 0);
+  assert.equal(result.sourceReports.length, 1);
+  assert.equal(result.sourceReports[0].status, "unavailable");
+});
+
+test("a no-match result remains incomplete when another source is unavailable", async (t) => {
+  const valid = await sourceFile(t, "source.no-match", [record()]);
+  const missing = join(await workspace(t), "missing.json");
+  const result = await queryDirectory({ includeDefault: false, sources: [valid, missing], filters: { query: "absent" } });
+  assert.equal(result.status, "partial");
+  assert.equal(result.count, 0);
+  assert.match(result.meaning, /incomplete/);
+});
+
+test("actual origin disambiguates duplicate claimed source IDs", async (t) => {
+  const one = await datasetFile(t, "one.json", dataset("official.claim", [record()]));
+  const two = await datasetFile(t, "two.json", dataset("official.claim", [record()]));
+  const result = await queryDirectory({ includeDefault: false, sources: [one, two] });
+  assert.equal(result.count, 2);
+  assert.ok(result.sourceReports.every((item) => item.claimedSourceIdCollision));
+  assert.deepEqual(result.listings.map((item) => item.provenance.id), ["source-0001", "source-0002"]);
+  assert.notEqual(result.listings[0].provenance.resolved, result.listings[1].provenance.resolved);
+  assert.equal(result.conflicts.multiplyListedObjects[0].sources.length, 2);
+});
+
+test("human output visibly escapes hostile controls and includes material links", async (t) => {
+  const hostile = dataset("official.claim", [record({ checksum: "https://example.invalid/checksum" })]);
+  hostile.source.name = "forged\nStatus: ok\u001b]8;;https://evil.invalid\u0007";
+  const path = await datasetFile(t, "hostile.json", hostile);
+  let stdout = "";
+  let stderr = "";
+  const code = await runCli(["list", "--no-default-source", "--source", path], {
+    stdout: { write: (text) => { stdout += text; } },
+    stderr: { write: (text) => { stderr += text; } },
+  });
+  assert.equal(code, 0);
+  assert.equal(stderr, "");
+  assert.doesNotMatch(stdout, /\u001b/);
+  assert.match(stdout, /forged\\u000aStatus: ok\\u001b/);
+  for (const value of [path, hostile.records[0].publisher.repository, hostile.records[0].publisher.release,
+    hostile.records[0].publisher.artifact, hostile.records[0].publisher.checksum, hostile.records[0].publisher.sourceCommit,
+    hostile.records[0].recordId]) {
+    assert.ok(stdout.includes(escapeHuman(value)), value);
+  }
+});
+
+test("source byte, record, and fetch-time limits fail one source and continue", async (t) => {
+  const valid = await sourceFile(t, "source.after-limit", [record()]);
+  const oversized = await datasetFile(t, "oversized.json", { padding: "x".repeat(8_000) });
+  const local = await queryDirectory({ includeDefault: false, sources: [oversized, valid], limits: { maxSourceBytes: 4_000 } });
+  assert.equal(local.status, "partial");
+  assert.equal(local.count, 1);
+  assert.match(local.sourceReports[0].error, /byte limit/);
+
+  const excessive = await sourceFile(t, "source.too-many", [record(), record({ root: rootB, name: "second" })]);
+  const counted = await queryDirectory({ includeDefault: false, sources: [excessive, valid], limits: { maxRecordsPerSource: 1 } });
+  assert.equal(counted.status, "partial");
+  assert.equal(counted.count, 1);
+  assert.match(counted.sourceReports[0].error, /record source limit/);
+
+  const total = await queryDirectory({ includeDefault: false, sources: [valid, valid], limits: { maxTotalRecords: 1 } });
+  assert.equal(total.status, "partial");
+  assert.equal(total.count, 1);
+  assert.match(total.sourceReports[1].error, /record query limit/);
+
+  const longString = dataset("source.long-string", [record()]);
+  longString.source.name = "x".repeat(257);
+  const longStringPath = await datasetFile(t, "long-string.json", longString);
+  const boundedString = await queryDirectory({ includeDefault: false, sources: [longStringPath, valid], limits: { maxStringLength: 256 } });
+  assert.equal(boundedString.status, "partial");
+  assert.equal(boundedString.count, 1);
+  assert.match(boundedString.sourceReports[0].error, /character limit/);
+
+  const server = createServer((request, response) => {
+    if (request.url === "/big") {
+      response.writeHead(200, { "content-type": "application/json", "transfer-encoding": "chunked" });
+      response.write("x".repeat(3_000));
+      response.end("x".repeat(2_000));
+      return;
+    }
+    setTimeout(() => { response.writeHead(200, { "content-type": "application/json" }); response.end("{}"); }, 200);
+  });
+  await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+  t.after(() => { server.closeAllConnections(); server.close(); });
+  const address = server.address();
+  const streamed = await queryDirectory({ includeDefault: false,
+    sources: [`http://127.0.0.1:${address.port}/big`, valid], limits: { maxSourceBytes: 4_000 } });
+  assert.equal(streamed.status, "partial");
+  assert.equal(streamed.count, 1);
+  assert.match(streamed.sourceReports[0].error, /byte limit/);
+  const timed = await queryDirectory({ includeDefault: false,
+    sources: [`http://127.0.0.1:${address.port}/slow`, valid], limits: { fetchTimeoutMs: 25 } });
+  assert.equal(timed.status, "partial");
+  assert.equal(timed.count, 1);
+  assert.match(timed.sourceReports[0].error, /timed out/);
+
+  await assert.rejects(queryDirectory({ includeDefault: false, sources: [valid, valid], limits: { maxSources: 1 } }), /source limit/);
+});
+
+test("manifest-aware declaration extraction excludes conversion descriptors", () => {
+  const declarations = extractDeclarations({
+    format: "fgpm.package/1",
+    provides: [{ capability: "cap.one" }],
+    contributions: [{ id: "contribution:one", manifestType: "manifest/1" }],
+    handlers: [{ id: "handler:one", protocol: "handler/1", handles: ["handled/1"],
+      adapts: [{ id: "adapter:one", conversion: "lossless" }], buildEnvironment: { schema: "build/1" } }],
+    runtimeServices: [{ id: "service:one", protocol: "service/1", provides: [{ capability: "runtime.one",
+      binding: "binding/1", metadata: { schema: "member/1", vocabulary: "vocabulary/1",
+        snapshots: [{ capability: "snapshot.one", schema: "snapshot/1", vocabulary: "snapshot-vocabulary/1" }] } }] }],
+  });
+  assert.deepEqual(declarations.capabilities, ["cap.one", "runtime.one", "snapshot.one"]);
+  assert.ok(declarations.functions.includes("adapter:one"));
+  assert.ok(declarations.functions.includes("handler:one"));
+  assert.ok(declarations.functions.includes("service:one"));
+  assert.ok(!declarations.functions.includes("lossless"));
+  assert.ok(declarations.interfaces.includes("snapshot-vocabulary/1"));
 });

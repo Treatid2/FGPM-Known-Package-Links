@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MPL-2.0
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { extractDeclarations } from "../src/declarations.mjs";
 
 function parseArgs(argv) {
   const values = {};
@@ -13,18 +14,6 @@ function parseArgs(argv) {
     if (!values[required]) throw new Error(`--${required} is required`);
   }
   return values;
-}
-
-function collectStrings(value, keys, result = new Set()) {
-  if (Array.isArray(value)) {
-    for (const item of value) collectStrings(item, keys, result);
-  } else if (value && typeof value === "object") {
-    for (const [key, item] of Object.entries(value)) {
-      if (keys.has(key) && typeof item === "string") result.add(item);
-      collectStrings(item, keys, result);
-    }
-  }
-  return [...result].sort();
 }
 
 const args = parseArgs(process.argv.slice(2));
@@ -52,11 +41,7 @@ for (const item of index.packages) {
       license: item.licence,
       predecessor: null,
     },
-    declarations: {
-      capabilities: collectStrings(manifest, new Set(["capability", "governingCapability"])),
-      interfaces: collectStrings(manifest, new Set(["protocol", "manifestType", "binding", "vocabulary", "schema"])),
-      functions: collectStrings(manifest, new Set(["id", "handles", "validates", "builds", "adapts", "conversion"])),
-    },
+    declarations: extractDeclarations(manifest),
     publisher: {
       repository,
       release,
