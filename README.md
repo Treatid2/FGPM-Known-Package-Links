@@ -8,6 +8,8 @@ The corrected `data/reference-v1.json` is frozen as an LF byte representation: 6
 
 `data/public-dungeon-v1.json` is a separate optional source for the independently published Grid Dungeon Generator 0.1.0, Traversal 0.1.1, Reference Runtime 0.2.0, and FGPM integration Host 0.3.0. Each record links directly to its public repository, release, and archive and records the anonymously downloaded archive size, SHA-256, source commit, extracted content root, declarations, licence, and observed release immutability. It does not alter the frozen 28-record source or make these packages mandatory, trusted, compatible with every consumer, or selected for a project.
 
+The separately maintained [FGPM Reference World](https://github.com/Treatid2/fgpm-reference-world) is a related public project, not a package record. Its immutable [`v0.1.0` prerelease](https://github.com/Treatid2/fgpm-reference-world/releases/tag/v0.1.0) publishes the 34,669-byte project ZIP (`SHA-256 8b4b1d70bf2211691ec700f1a665a8907baca529336449135cfef7f635ae4b03`) and the 785,193-byte exact generation ZIP (`SHA-256 05f0283f62e4423ea1f5264e41144748dee4ed45ca3494e872aa6debe8d261a0`). Its [dependency map](https://github.com/Treatid2/fgpm-reference-world/blob/e42110993696fb3cb96226db9ac6ba7c92d5e067/project/dependencies.json) records the complete 32-object public retrieval closure, while its [Known Links source configuration](https://github.com/Treatid2/fgpm-reference-world/blob/e42110993696fb3cb96226db9ac6ba7c92d5e067/project/known-package-links.json) keeps discovery optional and source-attributed. These links document a consumer project; they do not make the project a package, a registry authority, or an accepted deployment.
+
 ## Query
 
 ```powershell
