@@ -6,6 +6,8 @@ The component is dependency-free and works with Node.js 20 or newer. Its bundled
 
 The corrected `data/reference-v1.json` is frozen as an LF byte representation: 60,311 bytes with SHA-256 `a41ccdd7e48eedde1ecabb27e99f885a8ace28507cf8f518aba354a126040d06`. The adjacent sidecar describes those exact bytes, and both `npm test` and `npm pack` verify the correspondence without newline normalization. The JSON source remains replaceable. Declaration extraction follows the supported package-manifest structures and does not treat descriptive values such as conversion quality as callable functions.
 
+`data/public-dungeon-v1.json` is a separate optional source for the independently published Grid Dungeon Generator 0.1.0, Traversal 0.1.1, Reference Runtime 0.2.0, and FGPM integration Host 0.3.0. Each record links directly to its public repository, release, and archive and records the anonymously downloaded archive size, SHA-256, source commit, extracted content root, declarations, licence, and observed release immutability. It does not alter the frozen 28-record source or make these packages mandatory, trusted, compatible with every consumer, or selected for a project.
+
 ## Query
 
 ```powershell
@@ -14,6 +16,8 @@ node .\bin\fgpm-known.mjs search runtime.scheduler --json
 node .\bin\fgpm-known.mjs get --namespace 6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4 --name demo.camera
 node .\bin\fgpm-known.mjs list --no-default-source
 node .\bin\fgpm-known.mjs search camera --no-default-source --source .\my-private-source.json
+node .\bin\fgpm-known.mjs list --no-default-source --source .\data\public-dungeon-v1.json
+node .\bin\fgpm-known.mjs search fgdungeon.reference-runtime --no-default-source --source .\data\public-dungeon-v1.json --json
 ```
 
 Use repeated `--source` options to query multiple sources. Use `--offline` to reject HTTP(S) retrieval. A valid query with no matching record says “not known to these sources”; it does not say that a package is invalid or unauthorized.

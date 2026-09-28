@@ -1,0 +1,211 @@
+{
+  "schema": "fgpm.known-package-source/1",
+  "source": {
+    "id": "treatid2.fgpm.public-dungeon",
+    "name": "Treatid2 FGPM public dungeon packages",
+    "version": "2026-09-28.1",
+    "attribution": "Anonymous public release downloads and FGPM package-identity verification by the FGPM release owner",
+    "observedAt": "2026-09-28T20:27:47Z",
+    "url": "https://github.com/Treatid2/FGPM-Known-Package-Links",
+    "manager": {
+      "version": "0.12.0-rc.2",
+      "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/v0.12.0-rc.2/fgpm-reference-tools-win32-x64-v0.12.0-rc.2.zip",
+      "sha256": "d00e0c82db6ff3bed967ededeb6c069d0c61a1e24cd4976c12170f048f239b7e",
+      "immutableRelease": true
+    }
+  },
+  "records": [
+    {
+      "recordId": "treatid2-public-dungeon:sha256:4ec9c005fdfe9c514ad003cc7653fb03040e2f6ddf5e2cfecd32481169d3f52a",
+      "coordinate": {
+        "namespace": "4c3f55e5-6045-49ae-bce5-714ff77938f4",
+        "name": "fgdungeon.grid-generator",
+        "version": "0.1.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:4ec9c005fdfe9c514ad003cc7653fb03040e2f6ddf5e2cfecd32481169d3f52a",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgdungeon.grid-generator"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2"
+        ],
+        "functions": [
+          "service:fgdungeon.grid-generator/0"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/fgdungeon.grid-generator",
+        "release": "https://github.com/Treatid2/fgdungeon.grid-generator/releases/tag/v0.1.0",
+        "artifact": "https://github.com/Treatid2/fgdungeon.grid-generator/releases/download/v0.1.0/fgpm-fgdungeon-grid-generator-0.1.0.zip",
+        "checksum": null,
+        "receipt": "https://api.github.com/repos/Treatid2/fgdungeon.grid-generator/releases/394502101",
+        "sourceCommit": "0251506f50d7485e723ecc22e3316e3e7588b967"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-28T20:27:47Z",
+        "archiveBytes": 43531,
+        "archiveSha256": "2e87b47dd4d6624a40ef3be0c55f2614aac23c23cbd118939c082545a3808730",
+        "method": "anonymous release download SHA-256 plus FGPM 0.12.0-rc.2 package identity --expected; GitHub release immutable=false observed"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-28T20:27:47Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-public-dungeon:sha256:26ae34063793c6ada257b8adaac40ebd41832fc1da53cd48f7f86b4b922cc791",
+      "coordinate": {
+        "namespace": "d8514207-1567-4f2f-9f50-34977002edd3",
+        "name": "fgdungeon.grid-traversal",
+        "version": "0.1.1"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:26ae34063793c6ada257b8adaac40ebd41832fc1da53cd48f7f86b4b922cc791",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgdungeon.grid-traversal"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2"
+        ],
+        "functions": [
+          "service:fgdungeon.grid-traversal/0"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/fgdungeon.grid-traversal",
+        "release": "https://github.com/Treatid2/fgdungeon.grid-traversal/releases/tag/v0.1.1",
+        "artifact": "https://github.com/Treatid2/fgdungeon.grid-traversal/releases/download/v0.1.1/fgpm-fgdungeon-grid-traversal-0.1.1.zip",
+        "checksum": null,
+        "receipt": "https://api.github.com/repos/Treatid2/fgdungeon.grid-traversal/releases/394528994",
+        "sourceCommit": "9d1cff3ce176c3fc27d3b3cf271699a989b2e430"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-28T20:27:47Z",
+        "archiveBytes": 102894,
+        "archiveSha256": "77053f95a3fc52e76006c6e2916484a36dd5152baec40d0230daa7ffb87b5455",
+        "method": "anonymous release download SHA-256 plus FGPM 0.12.0-rc.2 package identity --expected; GitHub release immutable=false observed"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-28T20:27:47Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-public-dungeon:sha256:3464779bcfd94718da7df21c9241bf8e803f8d83c2eec1a70e3274c0a795829d",
+      "coordinate": {
+        "namespace": "8ac0fb55-8105-439f-b24f-2085696c6d66",
+        "name": "fgdungeon.reference-runtime",
+        "version": "0.2.0"
+      },
+      "package": {
+        "format": "fgpm.package/2",
+        "contentRoot": "sha256:3464779bcfd94718da7df21c9241bf8e803f8d83c2eec1a70e3274c0a795829d",
+        "license": "Apache-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [
+          "fgdungeon.grid-generator",
+          "fgdungeon.grid-traversal",
+          "fgdungeon.reference-runtime"
+        ],
+        "interfaces": [
+          "fgpm.runtime-service/2"
+        ],
+        "functions": [
+          "service:fgdungeon.reference-runtime/0"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/fgdungeon.reference-runtime",
+        "release": "https://github.com/Treatid2/fgdungeon.reference-runtime/releases/tag/v0.2.0",
+        "artifact": "https://github.com/Treatid2/fgdungeon.reference-runtime/releases/download/v0.2.0/fgpm-fgdungeon-reference-runtime-0.2.0.zip",
+        "checksum": null,
+        "receipt": "https://api.github.com/repos/Treatid2/fgdungeon.reference-runtime/releases/396670103",
+        "sourceCommit": "cb5be8eac38e3063b2cd51bb81cdb1aa02b570e8"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified",
+        "verifiedAt": "2026-09-28T20:27:47Z",
+        "archiveBytes": 72700,
+        "archiveSha256": "8927fb6df956f511e2f71b2e2b5c65ae47fdbf6546c097bb173549a511c16e2a",
+        "method": "anonymous release download SHA-256 plus FGPM 0.12.0-rc.2 package identity --expected; GitHub release immutable=false observed"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-28T20:27:47Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": null
+      }
+    },
+    {
+      "recordId": "treatid2-public-dungeon:sha256:9eb6436b56e5a20c8cb2f95ec67d9db22cb089ec39d7c0f885a268a28667e202",
+      "coordinate": {
+        "namespace": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4",
+        "name": "fgpm.grid-dungeon-integration-runtime",
+        "version": "0.3.0"
+      },
+      "package": {
+        "format": "fgpm.package/1",
+        "contentRoot": "sha256:9eb6436b56e5a20c8cb2f95ec67d9db22cb089ec39d7c0f885a268a28667e202",
+        "license": "MPL-2.0",
+        "predecessor": null
+      },
+      "declarations": {
+        "capabilities": [],
+        "interfaces": [
+          "fgpm.demo.runtime/1"
+        ],
+        "functions": [
+          "pkg:fgpm.grid-dungeon-integration-runtime/runtime/dungeon-v04"
+        ]
+      },
+      "publisher": {
+        "repository": "https://github.com/Treatid2/FOSS-Package-Manager",
+        "release": "https://github.com/Treatid2/FOSS-Package-Manager/releases/tag/fgpm-grid-dungeon-integration-runtime-v0.3.0",
+        "artifact": "https://github.com/Treatid2/FOSS-Package-Manager/releases/download/fgpm-grid-dungeon-integration-runtime-v0.3.0/fgpm.grid-dungeon-integration-runtime-0.3.0-v02.zip",
+        "checksum": null,
+        "receipt": "https://api.github.com/repos/Treatid2/FOSS-Package-Manager/releases/398594760",
+        "sourceCommit": "154737901417a20f87685b1a754fec3556047040"
+      },
+      "verification": {
+        "status": "exact-bytes-and-content-root-verified; provisional-v1",
+        "verifiedAt": "2026-09-28T20:27:47Z",
+        "archiveBytes": 13985,
+        "archiveSha256": "e545d87f2940e3f6e2650fabd7e760c0ee2115a67c7eb829d71e88d705fbc687",
+        "method": "anonymous release download SHA-256 plus FGPM 0.12.0-rc.2 package identity --expected and validate-package; GitHub release immutable=true observed"
+      },
+      "availability": {
+        "status": "observed-available",
+        "observedAt": "2026-09-28T20:27:47Z"
+      },
+      "policy": {
+        "recommendation": "not-assessed",
+        "statement": "Publication and exact verification do not select this Host for a project or promote its provisional-v1 schema status."
+      }
+    }
+  ]
+}

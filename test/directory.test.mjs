@@ -5,6 +5,7 @@ import { createServer } from "node:http";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 import { queryDirectory, validateDataset } from "../src/directory.mjs";
 import { escapeHuman, runCli } from "../src/cli.mjs";
 import { extractDeclarations } from "../src/declarations.mjs";
@@ -90,6 +91,28 @@ test("bundled reference dataset contains the 28 verified public package records"
   assert.equal(result.count, 28);
   assert.equal(result.sourceReports[0].source.id, "treatid2.fgpm.stage-c-release");
   assert.ok(result.listings.every(({ record: item }) => item.verification.status === "exact-bytes-and-content-root-verified"));
+});
+
+test("additional public dungeon source exposes four anonymously verified exact packages", async () => {
+  const source = fileURLToPath(new URL("../data/public-dungeon-v1.json", import.meta.url));
+  const result = await queryDirectory({ includeDefault: false, sources: [source] });
+  assert.equal(result.status, "ok");
+  assert.equal(result.count, 4);
+  assert.deepEqual(new Set(result.listings.map(({ record }) => record.coordinate.name)), new Set([
+    "fgdungeon.grid-generator",
+    "fgdungeon.grid-traversal",
+    "fgdungeon.reference-runtime",
+    "fgpm.grid-dungeon-integration-runtime",
+  ]));
+  assert.ok(result.listings.every(({ record }) => record.availability.status === "observed-available"));
+  assert.ok(result.listings.every(({ record }) => record.publisher.artifact.startsWith("https://github.com/Treatid2/")));
+  const runtime = await queryDirectory({
+    includeDefault: false,
+    sources: [source],
+    filters: { capability: "fgdungeon.reference-runtime" },
+  });
+  assert.equal(runtime.count, 1);
+  assert.equal(runtime.listings[0].record.coordinate.version, "0.2.0");
 });
 
 test("search covers readable identity, capabilities, interfaces, functions, and version", async () => {
